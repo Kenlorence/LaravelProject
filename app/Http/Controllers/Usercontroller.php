@@ -9,6 +9,9 @@ class Usercontroller extends Controller
     public function index(){
         return 'hello from user';
     }
+    public function create(){
+        return view('user.create');
+    }
 
     public function show($id){
        
