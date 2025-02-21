@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\View;
+
 
 use Illuminate\Http\Request;
 
@@ -9,8 +11,15 @@ class Usercontroller extends Controller
     public function index(){
         return 'hello from user';
     }
-    public function create(){
-        return view('user.create');
+    public function login(){
+        if(View::exists('user.login')){
+            return view('user.login');
+        }else abort(404);
+       
+    }
+    public function register(){
+            return view('user.register');
+
     }
 
     public function show($id){

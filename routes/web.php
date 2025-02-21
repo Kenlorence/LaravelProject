@@ -20,4 +20,5 @@ use App\Http\Controllers\Usercontroller;
 // destroy - delete a data
 
 Route::get('/', [Studentcontroller::class, 'index']);
-route::get('/login', [Usercontroller::class,'create']);
+route::get('/register', [Usercontroller::class,'register']);
+route::get('/login', [Usercontroller::class,'login']);
